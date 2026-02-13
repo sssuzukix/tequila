@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>今夜の一杯ルーレット</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <p class="eyebrow">MOOD × COCKTAIL</p>
+        <h1>今夜の一杯ルーレット</h1>
+        <p class="subtitle">気分を選んで、派手に運命のカクテルを引こう！</p>
+      </header>
+
+      <section class="panel moods" aria-labelledby="mood-title">
+        <h2 id="mood-title">今日の気分（複数選択OK）</h2>
+        <div class="mood-grid" id="moodGrid">
+          <button class="mood" data-mood="refreshing">さっぱり</button>
+          <button class="mood" data-mood="sweet">甘め</button>
+          <button class="mood" data-mood="fruity">フルーティ</button>
+          <button class="mood" data-mood="strong">ガツンと強め</button>
+          <button class="mood" data-mood="adult">大人っぽい</button>
+          <button class="mood" data-mood="party">テンション上げたい</button>
+          <button class="mood" data-mood="chill">しっとり落ち着く</button>
+          <button class="mood" data-mood="adventure">冒険したい</button>
+        </div>
+      </section>
+
+      <section class="panel roulette-panel" aria-labelledby="roulette-title">
+        <h2 id="roulette-title">ルーレット</h2>
+        <div class="roulette-wrap">
+          <div class="pointer" aria-hidden="true"></div>
+          <div id="roulette" class="roulette">?
+          </div>
+        </div>
+        <button id="spinBtn" class="spin-btn">🎰 ルーレット開始！</button>
+      </section>
+
+      <section class="panel result" aria-live="polite" aria-atomic="true">
+        <h2>おすすめ</h2>
+        <p id="resultName" class="cocktail-name">気分を選んで回してみよう！</p>
+        <p id="resultDesc" class="cocktail-desc">選んだ気分に合う一杯を、演出つきで提案します。</p>
+      </section>
+    </main>
+
+    <canvas id="confettiCanvas" class="confetti" aria-hidden="true"></canvas>
+
+    <script src="script.js"></script>
+  </body>
+</html>
